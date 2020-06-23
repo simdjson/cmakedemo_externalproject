@@ -1,0 +1,16 @@
+# Simple demo of simdjson as a CMake dependency using ExternalProject_Add
+
+This repository is meant to serve as an example of how to use [simdjson](https://github.com/simdjson/simdjson) as a `CMake` dependency using `ExternalProject_Add`. It requires CMake 3.16 or better. Though it should work under Linux if you have an up-to-date system, it is untested under different platforms such as Visual Studio.
+
+Usage:
+
+```
+mkdir build && cd build && cmake .. && cmake --build . && ./src/test
+```
+
+The simple `CMake` project builds a simple parser (`./src/test`) which can parse a given JSON document (provided as a command-line parameter) and determine whether it is valid JSON.
+
+
+A simpler approach is to use simdjson as Git submodule, or just as subdirectory. See [cmakedemo](https://github.com/simdjson/cmakedemo).
+
+Please refer to the main [simdjson](https://github.com/simdjson/simdjson) project for further documentation.
