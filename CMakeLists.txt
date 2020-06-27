@@ -26,7 +26,7 @@ list(APPEND CL_ARGS "-DSIMDJSON_BUILD_STATIC=ON")
 ExternalProject_Add(simdjson_repo
   GIT_REPOSITORY    https://github.com/simdjson/simdjson.git
   CMAKE_ARGS        ${CL_ARGS}
-  GIT_TAG          v0.4.0
+  GIT_TAG          v0.4.1
   GIT_SUBMODULES   ""
   GIT_SHALLOW         TRUE
 )
