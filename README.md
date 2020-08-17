@@ -14,3 +14,8 @@ The simple `CMake` project builds a simple parser (`./src/test`) which can parse
 A simpler approach is to use simdjson as Git submodule, or just as subdirectory. See [cmakedemo](https://github.com/simdjson/cmakedemo).
 
 Please refer to the main [simdjson](https://github.com/simdjson/simdjson) project for further documentation.
+
+
+## FetchContent
+
+We can also do [a demo using a single CMakeLists.txt file](https://github.com/simdjson/cmake_demo_single_file).
