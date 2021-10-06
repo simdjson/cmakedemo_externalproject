@@ -20,21 +20,16 @@ set(PROJECT_VERSION_PATCH 1)
 
 include(ExternalProject)
 
-list(APPEND CL_ARGS "-DSIMDJSON_JUST_LIBRARY=ON")
-list(APPEND CL_ARGS "-DSIMDJSON_BUILD_STATIC=ON")
-
 ExternalProject_Add(simdjson_repo
   GIT_REPOSITORY    https://github.com/simdjson/simdjson.git
-  CMAKE_ARGS        ${CL_ARGS}
-  GIT_TAG          v0.4.5
-  GIT_SUBMODULES   ""
+  GIT_TAG          v1.0.0
   GIT_SHALLOW         TRUE
 )
 
 add_library(simdjson STATIC IMPORTED)
 
 ExternalProject_Get_Property(simdjson_repo binary_dir)
-set_target_properties(simdjson PROPERTIES IMPORTED_LOCATION ${binary_dir}/src/libsimdjson.a)
+set_target_properties(simdjson PROPERTIES IMPORTED_LOCATION ${binary_dir}/libsimdjson.a)
 ExternalProject_Get_Property(simdjson_repo source_dir)
 include_directories(${source_dir}/include/)
 
