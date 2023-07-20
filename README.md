@@ -5,7 +5,7 @@ This repository is meant to serve as an example of how to use [simdjson](https:/
 Usage:
 
 ```
-mkdir build && cd build && cmake .. && cmake --build . && ./src/test
+cmake -B build && cmake --build build -v && ./build/src/test
 ```
 
 The simple `CMake` project builds a simple parser (`./src/test`) which can parse a given JSON document (provided as a command-line parameter) and determine whether it is valid JSON.

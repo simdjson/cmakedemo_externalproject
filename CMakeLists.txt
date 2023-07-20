@@ -19,11 +19,15 @@ set(PROJECT_VERSION_PATCH 1)
 
 
 include(ExternalProject)
+set(SIMDJSON_ROOT "simdjsonroot")
 
 ExternalProject_Add(simdjson_repo
   GIT_REPOSITORY    https://github.com/simdjson/simdjson.git
-  GIT_TAG          v1.0.0
-  GIT_SHALLOW         TRUE
+  GIT_SHALLOW       TRUE
+  INSTALL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/priv
+  CMAKE_ARGS
+        -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_SOURCE_DIR}/priv
+  BUILD_COMMAND ${CMAKE_COMMAND} --build . --config Release
 )
 
 add_library(simdjson STATIC IMPORTED)
