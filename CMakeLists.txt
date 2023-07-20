@@ -19,7 +19,6 @@ set(PROJECT_VERSION_PATCH 1)
 
 
 include(ExternalProject)
-set(SIMDJSON_ROOT "simdjsonroot")
 
 ExternalProject_Add(simdjson_repo
   GIT_REPOSITORY    https://github.com/simdjson/simdjson.git
