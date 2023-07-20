@@ -1,4 +1,5 @@
 # Simple demo of simdjson as a CMake dependency using ExternalProject_Add
+[![Ubuntu](https://github.com/simdjson/cmakedemo_externalproject/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/simdjson/cmakedemo_externalproject/actions/workflows/ubuntu.yml)
 
 This repository is meant to serve as an example of how to use [simdjson](https://github.com/simdjson/simdjson) as a `CMake` dependency using `ExternalProject_Add`. It requires CMake 3.16 or better. Though it should work under Linux if you have an up-to-date system, it is untested under different platforms such as Visual Studio.
 
